@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="274.0" prefWidth="275.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="resume_btn" layoutX="109.0" layoutY="99.0" mnemonicParsing="false" onAction="#handle_resume" text="Resume" />
+      <Button fx:id="save_btn" layoutX="115.0" layoutY="137.0" mnemonicParsing="false" onAction="#handle_save" text="Save" />
+      <Button fx:id="exit_btn" layoutX="120.0" layoutY="204.0" mnemonicParsing="false" onAction="#handle_exit" text="Exit" />
+      <Label layoutX="97.0" layoutY="45.0" text="MENU">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font></Label>
+      <Button fx:id="btn_menu" layoutX="97.0" layoutY="169.0" mnemonicParsing="false" onAction="#handle_menu" text="Main Menu" />
+      <Label fx:id="output" layoutX="50.0" layoutY="14.0" text="Remeber to save your progress !" textAlignment="CENTER" />
+   </children>
+</Pane>

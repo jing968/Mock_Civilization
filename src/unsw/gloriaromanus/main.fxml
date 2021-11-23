@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Background?>
+<?import javafx.scene.layout.BackgroundFill?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<?import com.esri.arcgisruntime.mapping.view.MapView?>
+
+<StackPane prefHeight="958.0" prefWidth="1245.0" stylesheets="/unsw/gloriaromanus/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <MapView fx:id="mapView" />
+    <VBox maxWidth="250" prefHeight="627.0" prefWidth="230.0" spacing="10.0" styleClass="panel-region" StackPane.alignment="TOP_LEFT">
+        <padding>
+            <Insets topRightBottomLeft="10" />
+        </padding>
+        <background>
+            <Background>
+                <fills>
+                    <BackgroundFill>
+                        <fill>
+                            <Color opacity="0.3" />
+                        </fill>
+                    </BackgroundFill>
+                </fills>
+            </Background>
+        </background>
+      <Label text="Objectives" />
+        <HBox>
+            <VBox />
+            <VBox />
+        </HBox>
+      <VBox prefHeight="111.0" prefWidth="230.0">
+         <children>
+            <TextArea fx:id="txtWinningObjectives" prefHeight="128.0" prefWidth="230.0" />
+         </children>
+      </VBox>
+        <VBox>
+            <Label text="Output from interactions" />
+            <TextArea fx:id="output_terminal" editable="false" text="" />
+        </VBox>
+      <VBox prefHeight="499.0" prefWidth="230.0" spacing="5.0">
+         <children>
+            <Label prefHeight="36.0" prefWidth="132.0" />
+            <Label prefHeight="34.0" prefWidth="144.0" text="GameState:" />
+            <TextField fx:id="GameStateTurns" editable="false" text="Turns" />
+            <Label prefHeight="32.0" prefWidth="144.0" text="Faction:" />
+            <TextField fx:id="FactionString" editable="false" text="FactionString" />
+            <TextField fx:id="FactionGold" editable="false" text="Gold" />
+            <TextField fx:id="FactionWealth" editable="false" text="Wealth" />
+            <HBox alignment="CENTER" prefHeight="98.0" prefWidth="230.0" spacing="45.0">
+               <children>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleEndTurn" prefHeight="43.0" prefWidth="77.0" text="End Turn" />
+                  <Button mnemonicParsing="false" onAction="#displayNames" prefHeight="46.0" prefWidth="67.0" text="Help" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="47.0" prefWidth="203.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#clearSpace" prefHeight="28.0" prefWidth="67.0" text="Clear" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="128.0" prefWidth="252.0" spacing="50.0">
+               <children>
+                  <Button fx:id="btn_menu" mnemonicParsing="false" onAction="#handle_menu" prefHeight="54.0" prefWidth="186.0" text="Menu">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Button>
+               </children></HBox>
+         </children>
+      </VBox>
+    </VBox>
+   <VBox maxWidth="278.0" prefHeight="857.0" prefWidth="278.0" spacing="10" styleClass="panel-region" StackPane.alignment="TOP_RIGHT">
+      <padding>
+         <Insets topRightBottomLeft="10" />
+      </padding>
+      <background>
+         <Background>
+            <fills>
+               <BackgroundFill>
+                  <fill>
+                     <Color opacity="0.3" />
+                  </fill>
+               </BackgroundFill>
+            </fills>
+         </Background>
+      </background>
+      <children>
+         <Label prefHeight="27.0" prefWidth="132.0" text="Provinces:" />
+         <VBox prefHeight="284.0" prefWidth="258.0" spacing="5.0">
+            <children>
+               <Label prefHeight="31.0" prefWidth="144.0" text="Your Province:" />
+               <TextField fx:id="ProvinceString" editable="false" text="ProvinceString" />
+               <TextField fx:id="ProvinceWealth" editable="false" text="Wealth" />
+               <TextField fx:id="ProvinceTaxRate" text="Tax Rate" />
+               <HBox alignment="CENTER" prefHeight="94.0" prefWidth="258.0" spacing="30.0">
+                  <VBox.margin>
+                     <Insets />
+                  </VBox.margin>
+                  <children>
+                     <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleDisplayStructures" prefHeight="43.0" prefWidth="77.0" text="Structures" />
+                     <Button alignment="CENTER" mnemonicParsing="false" onAction="#handleDisplayUnits" prefHeight="43.0" prefWidth="77.0" text="Units" />
+                  </children>
+               </HBox>
+               <HBox alignment="CENTER" prefHeight="52.0" prefWidth="258.0">
+                  <children>
+                     <Button fx:id="btnTaxRate" mnemonicParsing="false" onAction="#handleTaxRate" prefHeight="33.0" prefWidth="88.0" text="Set Tax Rate" />
+                  </children>
+               </HBox>
+            </children>
+         </VBox>
+         <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+            <children>
+               <Label prefHeight="32.0" prefWidth="144.0" text="Enemy Province:" />
+               <TextField fx:id="EnemyProvinceString" editable="false" text="ProvinceString" />
+               <TextField fx:id="EnemyWall" editable="false" text="Wall" />
+               <TextArea fx:id="EnemyUnits" editable="false" text="Units" />
+            </children>
+         </VBox>
+         <HBox alignment="CENTER" prefHeight="47.0" prefWidth="258.0">
+            <children>
+                 <Button onAction="#clickedInvadeButton" text="Invade" />
+            </children>
+         </HBox>
+         <Label prefHeight="32.0" prefWidth="144.0" text="Provinces Own:" />
+         <HBox alignment="CENTER" prefHeight="67.0" prefWidth="258.0">
+            <children>
+               <Button fx:id="Provinces" alignment="CENTER" mnemonicParsing="false" onAction="#handleDisplayProvinces" prefHeight="43.0" prefWidth="77.0" text="Provinces" />
+            </children>
+         </HBox>
+         <VBox fx:id="FactionProvinceVBox" maxWidth="268.0" prefHeight="276.0" prefWidth="258.0" spacing="10" styleClass="panel-region">
+            <padding>
+               <Insets topRightBottomLeft="10" />
+            </padding>
+            <background>
+               <Background>
+                  <fills>
+                     <BackgroundFill>
+                        <fill>
+                           <Color opacity="0.3" />
+                        </fill>
+                     </BackgroundFill>
+                  </fills>
+               </Background>
+            </background>
+            <children>
+               <Label prefHeight="41.0" prefWidth="194.0" text="Provinces Owned By This Faction" />
+               <VBox prefHeight="216.0" prefWidth="248.0" spacing="5.0">
+                  <children>
+                     <TextArea fx:id="FactionProvinceDescription" prefHeight="200.0" prefWidth="200.0" editable="false" />
+                  </children>
+               </VBox>
+            </children>
+         </VBox>
+      </children>
+   </VBox>
+   <VBox fx:id="ProvinceStructureDetails" maxWidth="268.0" prefHeight="712.0" prefWidth="268.0" spacing="10" styleClass="panel-region">
+      <padding>
+         <Insets topRightBottomLeft="10" />
+      </padding>
+      <background>
+         <Background>
+            <fills>
+               <BackgroundFill>
+                  <fill>
+                     <Color opacity="0.3" />
+                  </fill>
+               </BackgroundFill>
+            </fills>
+         </Background>
+      </background>
+      <children>
+         <Label prefHeight="41.0" prefWidth="194.0" text="Structures Within This Province" />
+         <TextField fx:id="txtTroopProduction" editable="false" text="troopProduction" />
+         <TextField fx:id="txtFarm" editable="false" text="farm" />
+         <TextField fx:id="txtWall" editable="false" text="wall" />
+         <TextField fx:id="txtRoad" editable="false" text="road" />
+         <Label prefHeight="32.0" prefWidth="144.0" text="Command:" />
+         <TextField fx:id="StructureCommand" editable="false" text="Usage: &quot;troopProduction, farm...&quot;" />
+         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+            <children>
+               <Button fx:id="StructureBuild" alignment="CENTER" mnemonicParsing="false" onAction="#handleBuildInfrastructure" prefHeight="43.0" prefWidth="77.0" text="Build" />
+               <Button fx:id="StructureUpgrade" alignment="CENTER" mnemonicParsing="false" onAction="#handleUpgradeInfrastructure" prefHeight="43.0" prefWidth="77.0" text="Upgrade" />
+            </children>
+         </HBox>
+         <Label prefHeight="32.0" prefWidth="144.0" text="Queue:" />
+         <TextArea fx:id="StructureQueue" editable="false" prefHeight="79.0" prefWidth="248.0" />
+      </children>
+      <StackPane.margin>
+         <Insets bottom="600.0" />
+      </StackPane.margin>
+   </VBox>
+   <VBox fx:id="UnitVBox" maxWidth="268.0" prefHeight="490.0" prefWidth="268.0" spacing="10" styleClass="panel-region">
+      <padding>
+         <Insets topRightBottomLeft="10" />
+      </padding>
+      <background>
+         <Background>
+            <fills>
+               <BackgroundFill>
+                  <fill>
+                     <Color opacity="0.3" />
+                  </fill>
+               </BackgroundFill>
+            </fills>
+         </Background>
+      </background>
+      <children>
+         <Label prefHeight="19.0" prefWidth="194.0" text="Troop Production:" />
+         <TextField fx:id="txtTroopProductionUnits" editable="false" text="TroopProduction" />
+         <Label prefHeight="19.0" prefWidth="194.0" text="Units Inside this province:" />
+         <VBox prefHeight="138.0" prefWidth="248.0" spacing="5.0">
+            <children>
+               <TextArea fx:id="ProvinceUnits" editable="false"  prefHeight="131.0" prefWidth="248.0" />
+            </children>
+         </VBox>
+         <Label prefHeight="18.0" prefWidth="144.0" text="Command" />
+         <TextField fx:id="UnitProvinceCommand" editable="false"  text="Province: (Only for Move)" />
+         <TextField fx:id="UnitCommand" editable="false"  text="Usage: &quot;troop a, troop b, troop c, ...&quot;" />
+         <HBox alignment="CENTER" prefHeight="70.0" prefWidth="239.0" spacing="35.0">
+            <children>
+               <Button mnemonicParsing="false" onAction="#handleTrainUnit" prefHeight="44.0" prefWidth="74.0" text="Train" />
+               <Button mnemonicParsing="false" onAction="#handleMovement" prefHeight="44.0" prefWidth="74.0" text="Move" />
+            </children>
+         </HBox>
+         <Label prefHeight="32.0" prefWidth="144.0" text="Queue:" />
+         <VBox prefHeight="146.0" prefWidth="248.0" spacing="5.0">
+            <children>
+               <TextArea fx:id="ProvinceUnitsQueue" editable="false"  prefHeight="133.0" prefWidth="248.0" />
+            </children>
+         </VBox>
+      </children>
+      <StackPane.margin>
+         <Insets bottom="600.0" />
+      </StackPane.margin>
+   </VBox>
+   <VBox fx:id="NamesVBox" maxWidth="268.0" prefHeight="309.0" prefWidth="268.0" spacing="10" styleClass="panel-region">
+      <padding>
+         <Insets topRightBottomLeft="10" />
+      </padding>
+      <background>
+         <Background>
+            <fills>
+               <BackgroundFill>
+                  <fill>
+                     <Color opacity="0.3" />
+                  </fill>
+               </BackgroundFill>
+            </fills>
+         </Background>
+      </background>
+      <children>
+         <Label prefHeight="17.0" prefWidth="149.0" text="What the buttons do." />
+         <VBox prefHeight="393.0" prefWidth="248.0" spacing="5.0">
+            <children>
+               <TextArea prefHeight="398.0" editable="false"  prefWidth="248.0" text="End Turn:&#10;- Ends the current faction turn and lets &#10;     player continue&#10;- Winning the game:&#10;      - Once a player has hit end turn&#10;      - It will check to see if they have &#10;          fulfilled the objectives in &#10;          the game. And if they have &#10;          end the game, else&#10;          continue to the nextplayer&#10;&#10;Structures&#10;- Will display information about the&#10;     structure within the province&#10;-  To upgrade or build a structure simply&#10;     enter a structure and hit the button&#10;&#10;Set Tax Rate&#10;- Enter a tax rate and hit set tax rate&#10;    to change the province's tax rate&#10;&#10;Unit&#10;- Will display units in the province&#10;- Train only requires the bottom textfield&#10;- However, move requires both the top&#10;   and bottom text.&#10;- You can move multiple units at once&#10;&#10;Provinces&#10;- Displays a list of province that the &#10;   faction owns. Useful for movement.&#10;&#10;&#10;&#10;" />
+            </children>
+         </VBox>
+      </children>
+      <StackPane.margin>
+         <Insets top="500.0" />
+      </StackPane.margin>
+   </VBox>
+</StackPane>

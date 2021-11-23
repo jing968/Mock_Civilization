@@ -1,0 +1,81 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "cwd": "${workspaceRoot}",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - WinCondition",
+            "request": "launch",
+            "mainClass": "unsw.gloriaromanus.WinCondition",
+            "projectName": "t09a-yakult_fba48e4b"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Battle",
+            "request": "launch",
+            "mainClass": "unsw.gloriaromanus.Battle",
+            "projectName": "t09a-yakult_fba48e4b"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - GloriaRomanusApplication",
+            "request": "launch",
+            "mainClass": "unsw.gloriaromanus.GloriaRomanusApplication",
+            "vmArgs": "--module-path \"./lib\" --add-modules javafx.controls,javafx.fxml",
+            "projectName": "t09a-yakult_fba48e4b"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MenuApplication",
+            "request": "launch",
+            "mainClass": "unsw.gloriaromanus.MenuApplication",
+            "vmArgs": "--module-path \"./lib\" --add-modules javafx.controls,javafx.fxml",
+            "projectName": "t09a-yakult_fba48e4b"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - UnitTest",
+            "request": "launch",
+            "mainClass": "test.UnitTest",
+            "projectName": "t09a-yakult_3c621079"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - GameState",
+            "request": "launch",
+            "mainClass": "unsw.gloriaromanus.GameState",
+            "projectName": "t09a-yakult_fba48e4b"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Stat",
+            "request": "launch",
+            "mainClass": "unsw.gloriaromanus.Stat",
+            "projectName": "t09a-yakult_fba48e4b"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Skirmish",
+            "request": "launch",
+            "mainClass": "unsw.gloriaromanus.Skirmish",
+            "projectName": "t09a-yakult_fba48e4b"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - GloriaRomanus",
+            "request": "launch",
+            "mainClass": "unsw.gloriaromanus.GloriaRomanus",
+            "projectName": "t09a-yakult_fba48e4b"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - GloriaRomanusLauncher",
+            "request": "launch",
+            "mainClass": "unsw.gloriaromanus.GloriaRomanusLauncher",
+            "vmArgs": "--module-path \"./lib\" --add-modules javafx.controls,javafx.fxml"
+        }
+    ]
+}

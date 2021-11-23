@@ -1,0 +1,87 @@
+{
+  "Rome": [
+    "Lugdunensis",
+    "Lusitania",
+    "Lycia et Pamphylia",
+    "Macedonia",
+    "Mauretania Caesariensis"
+  ],
+  "Carthaginians" : [
+    "Mauretania Tingitana",
+    "Moesia Inferior",
+    "Moesia Superior"
+  ],
+  "Seleucid Empire" : [
+    "Narbonensis",
+    "Noricum",
+    "Numidia"
+  ],
+  "Pontus" : [
+    "Pannonia Inferior",
+    "Pannonia Superior"
+  ],
+  "Celtic Britons" : [
+    "Raetia",
+    "Sardinia et Corsica",
+    "Sicilia",
+    "Syria",
+    "Tarraconensis",
+    "Thracia"
+  ],
+  "Macedonians" : [
+    "V",
+    "VI",
+    "VII"
+  ],
+  "Parthians" : [
+    "VIII",
+    "X",
+    "XI"
+  ],
+  "Gaul": [
+    "Achaia",
+    "Aegyptus",
+    "Africa Proconsularis"
+  ],
+  "Spanish" : [
+    "Alpes Cottiae",
+    "Alpes Graiae et Poeninae",
+    "Alpes Maritimae",
+    "Aquitania"
+  ],
+  "Numidians" : [
+    "Arabia",
+    "Armenia Mesopotamia"
+  ],
+  "Amenians" : [
+    "Asia",
+    "Baetica",
+    "Belgica"
+  ],
+  "Egypians" : [
+    "Bithynia et Pontus",
+    "Britannia"
+  ],
+  "Germanics" : [
+    "Cilicia",
+    "Creta et Cyrene",
+    "Cyprus"
+  ],
+  "Greek City States" : [
+    "Dacia",
+    "Dalmatia",
+    "Galatia et Cappadocia"
+  ],
+  "Thracians" : [
+    "Germania Inferior",
+    "Germania Superior",
+    "I",
+    "II"
+  ],
+  "Dacians" : [
+    "III",
+    "IV",
+    "IX",
+    "Iudaea"
+  ]
+}
