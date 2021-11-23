@@ -7,6 +7,22 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch GloriaRomanusApplication",
+            "request": "launch",
+            "mainClass": "unsw.gloriaromanus.GloriaRomanusApplication",
+            "projectName": "Mock_Civilization_5ebfe1de"
+        },
+        {
+            "type": "java",
+            "name": "Launch MenuApplication",
+            "request": "launch",
+            "mainClass": "unsw.gloriaromanus.MenuApplication",
+            "console": "internalConsole",
+            "vmArgs": "--module-path \"./lib\" --add-modules javafx.controls,javafx.fxml",
+            "projectName": "Mock_Civilization_5ebfe1de"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - WinCondition",
             "request": "launch",
             "mainClass": "unsw.gloriaromanus.WinCondition",
